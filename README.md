@@ -1,1 +1,1 @@
-# E39-React-Tic-Tac-Toe-Tutorial
+# React-Tic-Tac-Toe-Tutorial
