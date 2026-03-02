@@ -11,7 +11,7 @@ function Square({ value, onSquareClick }) {
 
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
-    if (calculateWinner(squares) || squares[i]) {
+    if (declearWinner(squares) || squares[i]) {
       return;
     }
     const nextSquares = squares.slice();
@@ -23,7 +23,7 @@ function Board({ xIsNext, squares, onPlay }) {
     onPlay(nextSquares);
   }
 
-  const winner = calculateWinner(squares);
+  const winner = declearWinner(squares);
   let status;
   if (winner) {
     status = 'Winner: ' + winner;
@@ -95,7 +95,7 @@ export default function Game() {
   );
 }
 
-function calculateWinner(squares) {
+function declearWinner(squares) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
